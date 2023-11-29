@@ -2,9 +2,11 @@ import openai
 from openai import OpenAI
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
 st.title("ChatGPT-like clone")
 
-API_KEY = st.text_input("Enter your Alpha Advantage API Key:", placeholder="sk-XXXX", type='password')
+API_KEY = st.text_input("Enter your Open AI API Key:", placeholder="sk-XXXX", type='password')
 submitted = st.button("Submit")
 
 client = OpenAI(api_key=API_KEY)
